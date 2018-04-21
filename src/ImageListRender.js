@@ -1,4 +1,5 @@
 import React,{PureComponent,Children,cloneElement} from 'react'
+import ReactDom from 'react-dom'
 import Viewer from 'viewerjs'
 require('viewerjs/dist/viewer.min.css')
 class ImageListRender extends PureComponent {

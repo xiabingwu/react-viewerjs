@@ -1,6 +1,6 @@
 {
   "name": "react-viewerjs",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "description": "React wrapper for viewerjs",
   "keywords": [
     "image preview",
@@ -9,7 +9,8 @@
     "react"
   ],
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "homepage": "https://github.com/xiabingwu/react-viewerjs",
   "author": "1052537969@qq.com",
@@ -21,7 +22,7 @@
     "url": "https://github.com/xiabingwu/react-viewerjs/issues"
   },
   "licenses": "MIT",
-  "main": "./libs/index",
+  "main": "./lib/index",
   "scripts" : { 
     "clean": "rimraf ./lib && mkdir lib",
     "lib": "npm run clean && babel src --out-dir lib"
