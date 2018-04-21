@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { HashRouter as Router, Route, Link } from "react-router-dom"
 import BaseDemoComponent from './components/BaseDemoComponent'
 import ListDemoComponent from './components/ListDemoComponent'
 const App = () => (
