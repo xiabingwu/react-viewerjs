@@ -1,6 +1,9 @@
 # react-viewerjs
 Image preview;React wrapper for viewerjs
 
+install
+
+npm i react-viewerjs
 
 base demo
 
