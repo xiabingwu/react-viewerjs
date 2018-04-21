@@ -1,4 +1,11 @@
 # react-viewerjs
 Image preview;React wrapper for viewerjs
 
-Demo will be complete, please look forward to
+
+base demo
+
+https://xiabingwu.github.io/react-viewerjs/#/ 
+
+list demo
+
+https://xiabingwu.github.io/react-viewerjs/#/list
