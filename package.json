@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "React wrapper for viewerjs",
   "keywords": [
-	"image preview",
+    "image preview",
     "react-viewerjs",
     "基于viewerjs的react版本图片预览",
-	"react"
+    "react"
   ],
   "files": [
     "src"
@@ -21,15 +21,27 @@
     "url": "https://github.com/xiabingwu/react-viewerjs/issues"
   },
   "licenses": "MIT",
-  "main": "./src/index",
+  "main": "./libs/index",
+  "scripts" : { 
+    "clean": "rimraf ./lib && mkdir lib",
+    "lib": "npm run clean && babel src --out-dir lib"
+   },
   "dependencies": {
-    "viewerjs": "^1.0.0-rc.1",
+    "prop-types": "^15.5.8",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "prop-types": "^15.5.8"
+    "viewerjs": "^1.0.0-rc.1"
   },
   "directories": {
     "examples": "examples"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "rimraf": "^2.6.2"
+  }
 }
