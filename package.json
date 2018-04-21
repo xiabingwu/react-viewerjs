@@ -1,0 +1,35 @@
+{
+  "name": "react-viewerjs",
+  "version": "0.1.0",
+  "description": "React wrapper for viewerjs",
+  "keywords": [
+	"image preview",
+    "react-viewerjs",
+    "基于viewerjs的react版本图片预览",
+	"react"
+  ],
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/xiabingwu/react-viewerjs",
+  "author": "1052537969@qq.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiabingwu/react-viewerjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiabingwu/react-viewerjs/issues"
+  },
+  "licenses": "MIT",
+  "main": "./src/index",
+  "dependencies": {
+    "viewerjs": "^1.0.0-rc.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "prop-types": "^15.5.8"
+  },
+  "directories": {
+    "examples": "examples"
+  },
+  "license": "MIT"
+}
