@@ -3,7 +3,7 @@
 Image preview;React wrapper for [viewerjs](https://github.com/fengyuanchen/viewerjs)
 
 
-##Install
+## Install
 
 npm i react-viewerjs
 
