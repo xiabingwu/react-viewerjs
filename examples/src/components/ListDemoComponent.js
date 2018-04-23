@@ -1,5 +1,5 @@
 import React from "react"
-import { RViewer, RViewerTrigger } from 'react-viewerjs'
+import { RViewer, RViewerTrigger } from '../react-viewerjs'
 const ListDemoComponent = () => {
   let sourceImageUrls = [
     "./imgs/1.jpg",

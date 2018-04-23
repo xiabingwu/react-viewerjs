@@ -1,9 +1,15 @@
 import React from "react"
-import { RViewer, RViewerTrigger } from 'react-viewerjs'
+import { RViewer, RViewerTrigger } from '../react-viewerjs'
 const OneImagePreview = () => {
   let sourceUrl = "./imgs/1.jpg"
+  let options={
+    toolbar: {//Since there is only one picture, let's hide "prev" and "next"
+      prev: false,
+      next: false
+    }
+  }
   return (
-    <RViewer imageUrls={sourceUrl}>
+    <RViewer options={options} imageUrls={sourceUrl}>
       <RViewerTrigger>
         <button>one image preview</button>
       </RViewerTrigger>

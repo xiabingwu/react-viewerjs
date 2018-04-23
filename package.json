@@ -1,6 +1,6 @@
 {
   "name": "react-viewerjs",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "React wrapper for viewerjs",
   "keywords": [
     "image preview",
@@ -23,14 +23,14 @@
   },
   "licenses": "MIT",
   "main": "./lib/index",
-  "scripts" : { 
+  "scripts": {
     "clean": "rimraf ./lib && mkdir lib",
-    "lib": "npm run clean && babel src --out-dir lib"
-   },
+    "lib": "npm run clean && babel src --out-dir lib && ncp lib ./examples/src/react-viewerjs"
+  },
   "dependencies": {
     "prop-types": "^15.5.8",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "viewerjs": "^1.0.0-rc.1"
   },
   "directories": {
@@ -43,6 +43,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "ncp": "^2.0.0",
     "rimraf": "^2.6.2"
   }
 }

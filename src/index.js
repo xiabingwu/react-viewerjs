@@ -65,11 +65,12 @@ class RViewer extends PureComponent {
     })
   }
   render() {
-    const {children,imageUrls,options,...restProps} = this.props;
-    let resultUrls =(typeof imageUrls === 'string') ? [imageUrls] : imageUrls;
+    const {children,imageUrls,options} = this.props
+    let resultUrls =(typeof imageUrls === 'string') ? [imageUrls] : imageUrls
+    // React v16.2.0颁布版本才能使用React.Fragment，如果没有的话，就用div包裹
+    let Fragment=React.Fragment?React.Fragment:'div'
     return (
-      // React v16.2.0颁布版本才能使用React.Fragment，这里先用div包裹
-      <div {...restProps}>
+      <Fragment>
         {
           this.state.isShow ? <ImageListRender imageUrls={resultUrls} index={this.state.index} options={options} hide={this.hide}/> : null
         }
@@ -84,7 +85,7 @@ class RViewer extends PureComponent {
             return cloneElement(child.props.children, props);
           })
         }
-      </div>
+      </Fragment>
     )
   }
 }

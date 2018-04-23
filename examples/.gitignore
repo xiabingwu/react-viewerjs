@@ -5,3 +5,4 @@ package-lock.json
 *.patch
 *.bak
 .DS_Store
+yarn-error.log

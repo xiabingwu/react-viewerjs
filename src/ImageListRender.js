@@ -5,7 +5,7 @@ require('viewerjs/dist/viewer.min.css')
 class ImageListRender extends PureComponent {
     render() {
       const {imageUrls} = this.props;
-      return (<div ref="imageListWrapper">
+      return (<div style={{display:'none'}} ref="imageListWrapper">
         {
           imageUrls.map((url, index) => {
             return <img src={url} key={index} style={{display: 'none'}}/>
