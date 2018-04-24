@@ -22,7 +22,7 @@ Has has only one child element, which is used to trigger the picture preview
 
 | Property        | Description     | Type           | Default  | Required |
 | --------- | ------ | ------------ | ---- | ---- |
-| index | In the picture collection, select the index image for preview | number | undefined    | no |
+| index | In the picture collection, select the index image for preview | number | 0    | false |
 
 ### Demo
 
