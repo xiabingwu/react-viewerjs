@@ -1,41 +1,41 @@
 # react-viewerjs
 
-[View README in English](README-en.md)
+[以中文查看](README.md)
 
-图片预览;对[viewerjs](https://github.com/fengyuanchen/viewerjs)库的react封装
+Image preview;React wrapper for [viewerjs](https://github.com/fengyuanchen/viewerjs)
 
 
-## 安装
+## Install
 
 npm i react-viewerjs
 
 ## API
 
-### RViewer组件配置参数
+### RViewer
 
-| 参数        | 说明     | 类型           | 默认值  | 是否必须 |
+| Property        | Description     | Type           | Default  | Required |
 | --------- | ------ | ------------ | ---- | ---- |
-| imageUrls | 单张图片预览地址（使用字符串）或者多张图片预览地址集合（使用数组） | string\|array | undefined    | 是 |
-| options | 预览配置参见（[viewerjs options](https://github.com/fengyuanchen/viewerjs#options)） | object | undefined    | 否 |
+| imageUrls | A picture or a collection of pictures for preview | string\|array | undefined    | true |
+| options | preview config（[viewerjs options](https://github.com/fengyuanchen/viewerjs#options)） | object | undefined    | false |
 
-### RViewerTrigger组件说明
+### RViewerTrigger
 
-该组件只有一个元素，用于触发图片预览
+Has has only one child element, which is used to trigger the picture preview
 
-| 参数        | 说明     | 类型           | 默认值 | 是否必须 |
+| Property        | Description     | Type           | Default  | Required |
 | --------- | ------ | ------------ | ---- | ---- |
-| index | 预览触发显示索引为index图片，默认为0，显示第一张 | number | 0    | 否 |
+| index | In the picture collection, select the index image for preview | number | 0    | false |
 
-### 例子
+### Demo
 
-- #### 基础
+- #### base
 ````jsx
 import React from "react"
 import { RViewer, RViewerTrigger } from '../react-viewerjs'
 const OneImagePreview = () => {
   let sourceUrl = "./imgs/1.jpg"
   let options={
-    toolbar: {//单张图片预览不要pre和next底部按钮，隐藏它
+    toolbar: {//Since there is only one picture, let's hide "prev" and "next"
       prev: false,
       next: false
     }
@@ -71,7 +71,7 @@ ReactDOM.render(<BaseDemoComponent />, document.getElementById('root'));
 ````
 https://xiabingwu.github.io/react-viewerjs/#/ 
 
-- #### 列表
+- #### list
 ````jsx
 import React from "react"
 import { RViewer, RViewerTrigger } from '../react-viewerjs'
@@ -83,7 +83,7 @@ const ListDemoComponent = () => {
     "./imgs/4.jpg",
     "./imgs/5.jpg"
   ]
-  let thumbImageUrls = sourceImageUrls//小图和原图一样，只是为了演示方便
+  let thumbImageUrls = sourceImageUrls//In reality, the thumbnail and the original may not be the same, which are set to be equal, just for the sake of a simple demonstration
   return (
     <RViewer imageUrls={sourceImageUrls}>
       <ul>
@@ -91,7 +91,7 @@ const ListDemoComponent = () => {
           return (
             <li  key={index} style={{marginBottom:"20PX"}}>
               <span>image {index+1}</span>
-              {/*这里需要设置index值，告知触发图片预览该显示哪张图片*/}
+              {/*By default, the index value is 0,So it is necessary to set the index prop*/}
               <RViewerTrigger index={index}>
                 <img src={pic} style={{width:"50px",verticalAlign:"middle"}}  />
               </RViewerTrigger>
